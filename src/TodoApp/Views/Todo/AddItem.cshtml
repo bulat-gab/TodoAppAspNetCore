@@ -1,0 +1,14 @@
+@model TodoApp.DataAccess.Todo
+
+
+<form asp-action="AddItem" method="POST">
+    
+    <label asp-for="Name">Name:</label>
+    <input asp-for="Name"/>
+
+    <label asp-for="Content">Contents:</label>
+    <input asp-for="Content"/>
+
+    <button type="submit">Add</button>
+</form>
+

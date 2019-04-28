@@ -1,0 +1,21 @@
+@using TodoApp.DataAccess
+@model TodoViewModel
+
+
+<div>
+    @{
+        var i = 0;
+        foreach (var todo in Model.Todos)
+        {
+            <div>
+                <div>@i</div>
+                <div>@todo.Name</div>
+                <div>@todo.Content</div>
+            </div>
+        }
+    }  
+</div>
+
+<div class="panel-footer add-item-form">
+    @await  Html.PartialAsync("AddItem", new Todo())
+</div>
