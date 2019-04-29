@@ -1,21 +1,26 @@
 @using TodoApp.DataAccess
 @model TodoViewModel
 
+<div class="panel-footer add-item-form">
+    @await  Html.PartialAsync("AddItem", new Todo())
+</div>
 
 <div>
     @{
-        var i = 0;
-        foreach (var todo in Model.Todos)
+        var i = 1;
+        if (Model.Todos.Any())
         {
-            <div>
-                <div>@i</div>
-                <div>@todo.Name</div>
-                <div>@todo.Content</div>
-            </div>
+            <ul class="list-group">
+                @{
+                    foreach (var todo in Model.Todos)
+                    {
+                        <li class="list-group-item">
+                            <span>@(i++).</span> <span class="font-weight-bold">@todo.Name</span>
+                            <div>@todo.Content</div>
+                        </li>
+                    }
+                }
+            </ul>
         }
     }  
-</div>
-
-<div class="panel-footer add-item-form">
-    @await  Html.PartialAsync("AddItem", new Todo())
 </div>

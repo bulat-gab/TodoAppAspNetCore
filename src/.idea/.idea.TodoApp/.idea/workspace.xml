@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e72c9a2-0fb6-4ce4-8fa7-06e0d78d7432" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/appsettings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,39 +19,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TodoApp/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="79">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
-                <marker date="1556546731803" expanded="false" signature="6:413" ph="..." />
-                <marker date="1556546731803" expanded="true" signature="432:2566" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="459:2564" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="518:581" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="804:1644" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="877:1154" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="1311:1463" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="1832:2558" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="1879:1956" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="1973:2232" ph="{...}" />
-                <marker date="1556546731803" expanded="true" signature="2375:2546" ph="{...}" />
+                <marker date="1556551722892" expanded="false" signature="6:413" ph="..." />
+                <marker date="1556551722892" expanded="true" signature="432:2565" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="459:2563" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="518:581" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="804:1643" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="877:1154" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="1310:1462" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="1831:2557" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="1878:1955" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="1972:2231" ph="{...}" />
+                <marker date="1556551722892" expanded="true" signature="2374:2545" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/ad/a8afb174/HostingEnvironmentExtensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/5a/820c1fbe/EnvironmentName.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -78,8 +58,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TodoApp/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TodoApp/appsettings.Development.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
@@ -101,17 +90,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
-                <marker date="1556524841282" expanded="true" signature="49:303" ph="&lt;div.../&gt;" />
-                <marker date="1556524841282" expanded="true" signature="59:294" ph="@..." />
-                <marker date="1556524841282" expanded="true" signature="122:288" ph="{...}" />
-                <marker date="1556524841282" expanded="true" signature="145:278" ph="&lt;div.../&gt;" />
-                <marker date="1556524841282" expanded="true" signature="305:405" ph="&lt;div.../&gt;" />
+                <marker date="1556553127101" expanded="true" signature="49:601" ph="&lt;div.../&gt;" />
+                <marker date="1556553127101" expanded="true" signature="59:592" ph="@..." />
+                <marker date="1556553127101" expanded="true" signature="111:586" ph="{...}" />
+                <marker date="1556553127101" expanded="true" signature="134:576" ph="&lt;ul.../&gt;" />
+                <marker date="1556553127101" expanded="true" signature="174:558" ph="@..." />
+                <marker date="1556553127101" expanded="true" signature="230:540" ph="{...}" />
+                <marker date="1556553127101" expanded="true" signature="277:518" ph="&lt;div.../&gt;" />
+                <marker date="1556553127101" expanded="true" signature="603:703" ph="&lt;div.../&gt;" />
               </folding>
             </state>
           </provider>
@@ -164,22 +156,22 @@
         <option value="$PROJECT_DIR$/TodoApp/Views/Todo/Todo.cshtml" />
         <option value="$PROJECT_DIR$/TodoApp/DataAccess/ITodoRepository.cs" />
         <option value="$PROJECT_DIR$/TodoApp/DataAccess/TodoRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml" />
         <option value="$PROJECT_DIR$/TodoApp/Views/Todo/AddItem.cshtml" />
         <option value="$PROJECT_DIR$/TodoApp/Controllers/TodoController.cs" />
         <option value="$PROJECT_DIR$/TodoApp/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/TodoApp/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/TodoApp/Startup.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/TodoApp/appsettings.json" />
+        <option value="$PROJECT_DIR$/TodoApp/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1943" />
-    <option name="height" value="1103" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -202,6 +194,19 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
               <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TodoApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Todo" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -256,12 +261,12 @@
       <updated>1556466294426</updated>
       <workItem from="1556466297504" duration="252000" />
       <workItem from="1556474475595" duration="3380000" />
-      <workItem from="1556516808670" duration="6118000" />
+      <workItem from="1556516808670" duration="8086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9750000" />
+    <option name="totallyTimeSpent" value="11718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,10 +278,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19190283" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10660981" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -475,20 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <marker date="1556524841282" expanded="true" signature="49:303" ph="&lt;div.../&gt;" />
-            <marker date="1556524841282" expanded="true" signature="59:294" ph="@..." />
-            <marker date="1556524841282" expanded="true" signature="122:288" ph="{...}" />
-            <marker date="1556524841282" expanded="true" signature="145:278" ph="&lt;div.../&gt;" />
-            <marker date="1556524841282" expanded="true" signature="305:405" ph="&lt;div.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TodoApp/Views/Home/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -501,6 +492,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TodoApp/Dockerfile">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/ad/a8afb174/HostingEnvironmentExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/5a/820c1fbe/EnvironmentName.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TodoApp/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -517,49 +522,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TodoApp/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        <state relative-caret-position="79">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
-            <marker date="1556546731803" expanded="false" signature="6:413" ph="..." />
-            <marker date="1556546731803" expanded="true" signature="432:2566" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="459:2564" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="518:581" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="804:1644" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="877:1154" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="1311:1463" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="1832:2558" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="1879:1956" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="1973:2232" ph="{...}" />
-            <marker date="1556546731803" expanded="true" signature="2375:2546" ph="{...}" />
+            <marker date="1556551722892" expanded="false" signature="6:413" ph="..." />
+            <marker date="1556551722892" expanded="true" signature="432:2565" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="459:2563" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="518:581" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="804:1643" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="877:1154" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="1310:1462" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="1831:2557" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="1878:1955" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="1972:2231" ph="{...}" />
+            <marker date="1556551722892" expanded="true" signature="2374:2545" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/ad/a8afb174/HostingEnvironmentExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89E901F5-02EC-4DB4-BBC5-F7BFEA24CDDA/5a/820c1fbe/EnvironmentName.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TodoApp/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TodoApp/appsettings.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TodoApp/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TodoApp/Views/Todo/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1556553127101" expanded="true" signature="49:601" ph="&lt;div.../&gt;" />
+            <marker date="1556553127101" expanded="true" signature="59:592" ph="@..." />
+            <marker date="1556553127101" expanded="true" signature="111:586" ph="{...}" />
+            <marker date="1556553127101" expanded="true" signature="134:576" ph="&lt;ul.../&gt;" />
+            <marker date="1556553127101" expanded="true" signature="174:558" ph="@..." />
+            <marker date="1556553127101" expanded="true" signature="230:540" ph="{...}" />
+            <marker date="1556553127101" expanded="true" signature="277:518" ph="&lt;div.../&gt;" />
+            <marker date="1556553127101" expanded="true" signature="603:703" ph="&lt;div.../&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
