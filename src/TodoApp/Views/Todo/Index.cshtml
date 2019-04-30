@@ -1,11 +1,11 @@
 @using TodoApp.DataAccess
 @model TodoViewModel
 
-<div class="panel-footer add-item-form">
+<div>
     @await  Html.PartialAsync("AddItem", new Todo())
 </div>
 
-<div>
+<div class="mt-5">
     @{
         var i = 1;
         if (Model.Todos.Any())
