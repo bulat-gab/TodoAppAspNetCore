@@ -1,11 +1,13 @@
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.DataAccess;
 using TodoApp.Models;
 
 namespace TodoApp.Controllers
 {
+    [Authorize]
     public class TodoController : Controller
     {
         private ITodoRepository todoRepository;
