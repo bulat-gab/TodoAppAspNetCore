@@ -9,7 +9,6 @@ using TodoApp.Models;
 
 namespace TodoApp.Controllers
 {
-//    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()

@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TodoApp.DataAccess;
+using TodoApp.Models;
 using TodoApp.Settings;
 
 namespace TodoApp
@@ -27,6 +30,14 @@ namespace TodoApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // This is used for storing user identity in sqlite db
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+            
+            
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -45,16 +56,8 @@ namespace TodoApp
             services.AddSingleton<TodoContext>();
             services.AddSingleton<ITodoRepository, TodoRepository>();
 
-
-//            services.AddDbContext<ApplicationDbCo>();
-            
             services
-                .AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                })
+                .AddAuthentication()
                 .AddGoogle(options =>
                 {
                     options.ClientId = Configuration["Google:ClientId"];
@@ -80,7 +83,7 @@ namespace TodoApp
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-//            app.UseAuthentication();
+            app.UseAuthentication();
             
             app.UseMvc(routes =>
             {
