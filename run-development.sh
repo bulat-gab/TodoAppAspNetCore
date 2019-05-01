@@ -1,3 +1,3 @@
-docker-compose up -d mongodb
+docker-compose start mongodb
 cd ./src/TodoApp/
 dotnet watch run

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCore.Identity.Mongo;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,13 +31,23 @@ namespace TodoApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var mongoSettings = new MongoSettings
+            {
+                Host = Configuration.GetSection("MongoHost").Value,
+                Database = Configuration.GetSection("MongoDb").Value
+            };
             // This is used for storing user identity in sqlite db
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-            
+//            services.AddDbContext<ApplicationDbContext>(options =>
+//                options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
+//            services.AddIdentity<ApplicationUser, IdentityRole>()
+//                .AddEntityFrameworkStores<ApplicationDbContext>()
+//                .AddDefaultTokenProviders();
+
+            services.AddIdentityMongoDbProvider<ApplicationUser>( options =>
+                {
+                    options.ConnectionString = $"{mongoSettings.Host}{mongoSettings.Database}";
+                    options.UsersCollection = "Users";
+                });
             
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -47,13 +58,10 @@ namespace TodoApp
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            var mongoSettings = new MongoSettings
-            {
-                Host = Configuration.GetSection("MongoHost").Value,
-                Database = Configuration.GetSection("MongoDb").Value
-            };
+            
             services.AddSingleton(mongoSettings);
-            services.AddSingleton<TodoContext>();
+//            services.AddSingleton<TodoContext>();
+            services.AddSingleton<ApplicationMongoContext>();
             services.AddSingleton<ITodoRepository, TodoRepository>();
 
             services

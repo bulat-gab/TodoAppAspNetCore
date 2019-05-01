@@ -16,17 +16,17 @@ namespace TodoApp.Controllers
         [Route("[controller]/[action]")]
         public class AccountController : Controller
         {
-            private readonly UserManager<ApplicationUser> _userManager;
-            private readonly SignInManager<ApplicationUser> _signInManager;
-            private readonly ILogger _logger;
+            private readonly UserManager<ApplicationUser> userManager;
+            private readonly SignInManager<ApplicationUser> signInManager;
+            private readonly ILogger logger;
 
             public AccountController(UserManager<ApplicationUser> userManager,
                 SignInManager<ApplicationUser> signInManager,
                 ILogger<AccountController> logger)
             {
-                _userManager = userManager;
-                _signInManager = signInManager;
-                _logger = logger;
+                this.userManager = userManager;
+                this.signInManager = signInManager;
+                this.logger = logger;
             }
 
             [TempData]
@@ -47,8 +47,8 @@ namespace TodoApp.Controllers
             [ValidateAntiForgeryToken]
             public async Task<IActionResult> Logout()
             {
-                await _signInManager.SignOutAsync();
-                _logger.LogInformation("User logged out.");
+                await signInManager.SignOutAsync();
+                logger.LogInformation("User logged out.");
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
@@ -59,7 +59,7 @@ namespace TodoApp.Controllers
             {
                 // Request a redirect to the external login provider.
                 var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { returnUrl });
-                var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+                var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
                 return Challenge(properties, provider);
             }
 
@@ -73,15 +73,15 @@ namespace TodoApp.Controllers
                     return RedirectToAction(nameof(Login));
                 }
 
-                var info = await _signInManager.GetExternalLoginInfoAsync();
+                var info = await signInManager.GetExternalLoginInfoAsync();
                 if (info == null) return RedirectToAction(nameof(Login));
 
                 // Sign in the user with this external login provider if the user already has a login.
                 var result =
-                    await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false, true);
+                    await signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false, true);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
+                    logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
                     return RedirectToLocal(returnUrl);
                 }
 
@@ -101,18 +101,18 @@ namespace TodoApp.Controllers
                 if (ModelState.IsValid)
                 {
                     // Get the information about the user from the external login provider
-                    var info = await _signInManager.GetExternalLoginInfoAsync();
+                    var info = await signInManager.GetExternalLoginInfoAsync();
                     if (info == null)
                         throw new ApplicationException("Error loading external login information during confirmation.");
                     var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                    var result = await _userManager.CreateAsync(user);
+                    var result = await userManager.CreateAsync(user);
                     if (result.Succeeded)
                     {
-                        result = await _userManager.AddLoginAsync(user, info);
+                        result = await userManager.AddLoginAsync(user, info);
                         if (result.Succeeded)
                         {
-                            await _signInManager.SignInAsync(user, false);
-                            _logger.LogInformation("User created an account using {Name} provider.",
+                            await signInManager.SignInAsync(user, false);
+                            logger.LogInformation("User created an account using {Name} provider.",
                                 info.LoginProvider);
                             return RedirectToLocal(returnUrl);
                         }
