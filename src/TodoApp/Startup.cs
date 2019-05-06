@@ -62,7 +62,7 @@ namespace TodoApp
             services.AddSingleton(mongoSettings);
 //            services.AddSingleton<TodoContext>();
             services.AddSingleton<ApplicationMongoContext>();
-            services.AddSingleton<ITodoRepository, TodoRepository>();
+            services.AddSingleton<IUsersRepository, UsersRepository>();
 
             services
                 .AddAuthentication()
